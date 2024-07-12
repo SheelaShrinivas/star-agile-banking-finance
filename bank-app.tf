@@ -126,7 +126,7 @@ resource "aws_eip" "myeip1" {
 
 # Create Instance
 
-resource "aws_instance" "test server" {
+resource "aws_instance" "testserver" {
   ami           = "ami-04f8d7ed2f1a54b14"
   instance_type = "t2.micro"
   associate_public_ip_address = true
