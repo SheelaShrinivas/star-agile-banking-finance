@@ -112,7 +112,7 @@ resource "aws_security_group" "mysg1" {
 
 #Creating a new network interface
 resource "aws_network_interface" "myni1" {
- subnet_id = ws_subnet.mysubnet1.id
+ subnet_id = aws_subnet.mysubnet1.id
  private_ips = ["10.0.0.10"]
  security_groups = [aws_security_group.mysg1.id]
 }
