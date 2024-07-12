@@ -115,7 +115,7 @@ resource "aws_eip" "proj-eip" {
 
 
 # Creating an ubuntu EC2 instance
-resource "aws_instance" "Prod-Server" {
+resource "aws_instance" "test-server" {
  ami = "ami-0ef82eeba2c7a0eeb"
  instance_type = "t2.micro"
  availability_zone = "ap-south-1b"
@@ -130,6 +130,6 @@ resource "aws_instance" "Prod-Server" {
      
  EOF
  tags = {
- Name = "Prod-Server"
+ Name = "test-server"
  }
 }
