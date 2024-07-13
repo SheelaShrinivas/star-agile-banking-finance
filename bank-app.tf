@@ -1,4 +1,12 @@
-
+#Initialize Terraform
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
 # Configure the AWS provider
 provider "aws" {
   region = "ap-south-1"
@@ -128,7 +136,6 @@ resource "aws_instance" "Prod-Server" {
  user_data  = <<-EOF
  #!/bin/bash
      sudo apt-get update -y
-     
  EOF
  tags = {
  Name = "Prod-Server"
